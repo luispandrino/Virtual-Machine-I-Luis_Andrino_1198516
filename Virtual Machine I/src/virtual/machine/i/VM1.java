@@ -35,7 +35,7 @@ public class VM1 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         txtRuta = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        lblfin = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,8 +60,9 @@ public class VM1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("jLabel1");
+        lblfin.setText("jLabel1");
 
+        jLabel2.setFont(new java.awt.Font("Engravers MT", 1, 24)); // NOI18N
         jLabel2.setText("Proyecto Virtual Machine 1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -77,32 +78,29 @@ public class VM1 extends javax.swing.JFrame {
                         .addComponent(jButton2))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblfin)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(157, 157, 157)
-                                .addComponent(jButton1))
+                                .addGap(68, 68, 68)
+                                .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(175, 175, 175)
-                                .addComponent(jLabel1)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(217, 217, 217)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 35, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addComponent(jLabel2)
-                .addContainerGap(139, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
+                .addGap(51, 51, 51)
                 .addComponent(jLabel2)
-                .addGap(42, 42, 42)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtRuta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
-                .addGap(42, 42, 42)
+                .addGap(31, 31, 31)
                 .addComponent(jButton1)
-                .addGap(38, 38, 38)
-                .addComponent(jLabel1)
+                .addGap(49, 49, 49)
+                .addComponent(lblfin)
                 .addGap(24, 24, 24))
         );
 
@@ -135,6 +133,9 @@ public class VM1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         VirtualMachineMAster convertidor = new VirtualMachineMAster();
         convertidor.Convertir(Ruta);
+        
+        
+        lblfin.setText(convertidor.termino());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -175,8 +176,8 @@ public class VM1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblfin;
     private javax.swing.JTextField txtRuta;
     // End of variables declaration//GEN-END:variables
 }

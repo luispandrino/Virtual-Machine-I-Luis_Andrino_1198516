@@ -12,11 +12,14 @@ import java.io.File;
  * @author ASUS
  */
 public class VirtualMachineMAster {
+    boolean finish = false;
+    String retorno = "";
+    String error = "";
     
  public void Convertir (String ruta){
      if (ruta.length() < 0){
 
-            System.out.println("No ingreso una ruta valida");
+            error = "No ingreso una ruta valida";
 
         }else{
             File filein = new File(ruta);
@@ -43,10 +46,21 @@ public class VirtualMachineMAster {
                 
             }
             writer.close();
+            finish = true; 
+            retorno = "File created : " + rutaSalida +".asm";
             System.out.println("File created : " + rutaSalida +".asm");
             
             
      }
+ }
+ 
+ public String termino(){
+     if (finish) {
+          
+         return retorno;
+         
+     }
+     return "";
  }
     
 }
