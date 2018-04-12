@@ -16,8 +16,8 @@ public class VirtualMachineI {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         //MiniPHPForm Form = new MiniPHPForm();
-       // Form.setVisible(true);
+         VM1 Form = new VM1();
+         Form.setVisible(true);
     }
     
 }

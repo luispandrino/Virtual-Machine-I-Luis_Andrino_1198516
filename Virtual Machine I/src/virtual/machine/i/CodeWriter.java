@@ -51,17 +51,17 @@ public class CodeWriter {
 
         }else if (command.equals("gt")){
 
-            outPrinter.print(arithmeticTemplate2("JLE"));//not <=
+            outPrinter.print(arithmeticTemplate2("JLE"));//no es  <=
             JumpFlag++;
 
         }else if (command.equals("lt")){
 
-            outPrinter.print(arithmeticTemplate2("JGE"));//not >=
+            outPrinter.print(arithmeticTemplate2("JGE"));//no es  >=
             JumpFlag++;
 
         }else if (command.equals("eq")){
 
-            outPrinter.print(arithmeticTemplate2("JNE"));//not <>
+            outPrinter.print(arithmeticTemplate2("JNE"));//no es  <>
             JumpFlag++;
 
         }else if (command.equals("not")){
