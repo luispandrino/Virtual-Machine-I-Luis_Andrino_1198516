@@ -60,7 +60,7 @@ public class VM1 extends javax.swing.JFrame {
             }
         });
 
-        lblfin.setText("jLabel1");
+        lblfin.setText(".");
 
         jLabel2.setFont(new java.awt.Font("Engravers MT", 1, 24)); // NOI18N
         jLabel2.setText("Proyecto Virtual Machine 1");
